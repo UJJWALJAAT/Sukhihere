@@ -8,7 +8,9 @@ browser = mechanize.Browser()
 browser.set_handle_robots(False)
 cookies = mechanize.CookieJar()
 browser.set_cookiejar(cookies)
-browser.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36')]
+browser.addheaders = [(Connection': 'keep-alive',
+			'Cache-Control': 'max-age=0',
+			'Upgrade-Insecure-Requests': '1','User-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36')]
 browser.set_handle_refresh(False)
 
 url = 'https://m.facebook.com/login.php'
